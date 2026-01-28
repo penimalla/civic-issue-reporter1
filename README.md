@@ -288,22 +288,4 @@ Made with ❤️ for civic engagement
 This file ensures the uploads directory is tracked by Git
 Actual uploaded images will be ignored via .gitignore
 
----
 
-## ✅ COMPLETE! YOU NOW HAVE EVERYTHING!
-
-### 🎯 Final Setup Steps:
-
-1. **Create the folder structure**
-2. **Copy each file** into its correct location
-3. **Create empty `static/uploads/` folder**
-4. **Run these commands:**
-
-```bash
-python -m venv venv
-venv\Scripts\activate  # Windows
-source venv/bin/activate  # Mac/Linux
-pip install -r requirements.txt
-python app.py
-
-🌐 Open browser: http://localhost:5000
