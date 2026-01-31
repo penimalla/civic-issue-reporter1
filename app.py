@@ -269,4 +269,4 @@ if __name__ == '__main__':
     print("🚀 Starting Civic Issue Reporter...")
     print("📍 Server running at: http://localhost:5000")
     print("📊 Database: SQLite (civic_reports.db)")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)              
