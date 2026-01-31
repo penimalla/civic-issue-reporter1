@@ -251,22 +251,13 @@ def get_stats():
         print(f"❌ Error fetching stats: {str(e)}")
         return jsonify({'error': f'Failed to fetch stats: {str(e)}'}), 500
 
+# Health check route
+@app.route('/health', methods=['GET'])
+def health():
+    """Health check endpoint"""
+    return jsonify({'status': 'ok'}), 200
+
 # Error handlers
 @app.errorhandler(404)
 def not_found(e):
     return jsonify({'error': 'Resource not found'}), 404
-
-@app.errorhandler(500)
-def internal_error(e):
-    return jsonify({'error': 'Internal server error'}), 500
-
-@app.errorhandler(413)
-def request_entity_too_large(e):
-    return jsonify({'error': 'File too large. Maximum size is 5MB'}), 413
-
-# Run application
-if __name__ == '__main__':
-    print("🚀 Starting Civic Issue Reporter...")
-    print("📍 Server running at: http://localhost:5000")
-    print("📊 Database: SQLite (civic_reports.db)")
-    app.run(debug=True, host='0.0.0.0', port=5000)              
